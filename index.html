@@ -22,9 +22,13 @@
           <option>Pop</option>
         </select>
       </div>
+      <div class="content-button">
+        <button type="button" name="button" @click="ordinaAnno">Ordina per anno di uscita</button>
+      </div>
     </div>
     <div class="container">
-      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere ">
+
+      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere">
         <div class="content-card">
           <div class="img-card">
             <img :src=`${album.poster}`>

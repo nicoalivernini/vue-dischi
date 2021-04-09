@@ -6,9 +6,19 @@
 
 .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+}
+
+.content-select select {
+  padding: 5px;
+  margin: 5px;
+}
+
+.content-button button {
+  padding: 5px;
+  margin: 5px;
 }
 
 .card {

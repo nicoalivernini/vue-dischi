@@ -21,10 +21,24 @@ var app = new Vue ({
     .then((response) => {
       this.albums = (response.data.response)
     });
-
-
-
   }, //Chiusura Mounted
 
+  methods: {
+
+    ordinaAnno: function () {
+      for (var i = 0; i < this.albums.length; i++) {
+        console.log(this.albums[i].year);
+        var years = this.albums[i].year
+      }
+
+      console.log(ordina());
+
+    },
+
+    ordina: function () {
+      years.sort(function(a, b) {return a - b});
+    }
+
+  } //Chiusura Methods
 
 })//Chiusura Vue
