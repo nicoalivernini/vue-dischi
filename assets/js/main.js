@@ -26,18 +26,9 @@ var app = new Vue ({
   methods: {
 
     ordinaAnno: function () {
-      for (var i = 0; i < this.albums.length; i++) {
-        console.log(this.albums[i].year);
-        var years = this.albums[i].year
-      }
+      this.albums.sort((a, b) => (a.year > b.year) ? 1 : -1);
 
-      console.log(ordina());
-
-    },
-
-    ordina: function () {
-      years.sort(function(a, b) {return a - b});
-    }
+    }, //Chiusura ordinaAnno
 
   } //Chiusura Methods
 
