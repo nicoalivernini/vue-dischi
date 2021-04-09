@@ -18,7 +18,6 @@ var app = new Vue ({
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
     .then((response) => {
       this.albums = (response.data.response)
-      console.log(this.albums);
     });
   }, //Chiurusa Mounted
 
