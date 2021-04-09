@@ -16,6 +16,7 @@
       <div class="content-select">
         <select v-model="selezioneGenere">
           <option disabled value="">Seleziona un genere</option>
+          <option>Tutti i generi</option>
           <option>Jazz</option>
           <option>Rock</option>
           <option>Metal</option>
@@ -28,7 +29,7 @@
     </div>
     <div class="container">
 
-      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere">
+      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere || selezioneGenere === 'Tutti i generi'">
         <div class="content-card">
           <div class="img-card">
             <img :src=`${album.poster}`>

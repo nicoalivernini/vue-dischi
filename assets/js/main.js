@@ -27,6 +27,7 @@ var app = new Vue ({
 
     ordinaAnno: function () {
       this.albums.sort((a, b) => (a.year > b.year) ? 1 : -1);
+      console.log(this.albums.sort((a, b) => (a.year > b.year) ? 1 : -1));
 
     }, //Chiusura ordinaAnno
 
