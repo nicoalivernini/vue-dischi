@@ -31,8 +31,7 @@
 
       <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere || selezioneGenere === 'Tutti i generi'">
         <div class="content-card">
-          <div class="img-card">
-            <img :src=`${album.poster}`>
+          <div class="img-card" :style="`background-image: url('${album.poster}')`">
             <i class="fas fa-play-circle"></i>
           </div>
           <div class="text-card">

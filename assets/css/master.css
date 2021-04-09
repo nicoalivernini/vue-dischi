@@ -23,7 +23,6 @@
 
 .card {
   width: 25%;
-  border: 1px solid #181818;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
   margin: 5px;
@@ -41,32 +40,28 @@
 
 .card .content-card .img-card {
   position: relative;
-}
-
-.card .content-card .img-card img {
   width: 100%;
-  padding: 15px;
-  /* transition: all 1s ease-in; */
-}
+  padding-top: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-.card .content-card:hover .img-card img {
-  /* transform: scale(1.1); */
 }
 
 .card .content-card .img-card i {
-  display: block;
+  display: none;
   position: absolute;
   bottom: 15%;
   right: 15%;
   font-size: 50px;
   color: green;
-  /* transition: all 3s ease; */
+  transition: all 3s ease;
 }
 
-/* .card .content-card:hover .img-card i {
+.card .content-card:hover .img-card i {
   display: block;
   transform: translateY(0);
-} */
+}
 
 .card .content-card .text-card {
   width: 100%;
