@@ -14,14 +14,17 @@
   <div id="root">
     <div class="container">
       <div class="content-select">
-        <select class="" name="" >
-          <option v-for="genere in albums" value="">{{ genere.genre }}</option>
-
+        <select v-model="selezioneGenere">
+          <option disabled value="">Seleziona un genere</option>
+          <option>Jazz</option>
+          <option>Rock</option>
+          <option>Metal</option>
+          <option>Pop</option>
         </select>
       </div>
     </div>
     <div class="container">
-      <div class="card" v-for="album in albums">
+      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere ">
         <div class="content-card">
           <div class="img-card">
             <img :src=`${album.poster}`>
