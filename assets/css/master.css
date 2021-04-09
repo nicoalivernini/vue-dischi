@@ -3,3 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.card {
+  width: 25%;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card .content-card .img-card img {
+  width: 100%;
+  padding: 10px;
+}
+
+.card .content-card .text-card {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 30px;
+}
