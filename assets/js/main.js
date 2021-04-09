@@ -11,7 +11,15 @@ var app = new Vue ({
 
   el: '#root',
   data: {
+    albums: [],
+  },//Chiusura Data
 
-  }//Chiusura Data
+  mounted() {
+    axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+    .then((response) => {
+      this.albums = (response.data.response)
+      console.log(this.albums);
+    });
+  }, //Chiurusa Mounted
 
 })//Chiusura Vue

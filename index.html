@@ -5,21 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vue Dischi Musicali</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/master.css">
 </head>
 <body>
   <div id="root">
     <div class="container">
-      <div class="card">
+      <div class="card" v-for="album in albums">
         <div class="content-card">
           <div class="img-card">
-            <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+            <img :src=`${album.poster}`>
+            <i class="fas fa-play-circle"></i>
           </div>
           <div class="text-card">
-            <h2>Title</h2>
-            <h3>Author</h3>
-            <span>Genere</span>
-            <span>Anno</span>
+            <h2>{{ album.title }}</h2>
+            <h3>{{ album.author }}</h3>
+            <span>{{ album.genre }}</span>
+            <span>{{ album.year }}</span>
           </div>
         </div>
       </div>
