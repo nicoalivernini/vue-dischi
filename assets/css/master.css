@@ -12,30 +12,51 @@
 }
 
 .content-select select {
-  padding: 5px;
-  margin: 5px;
+  padding: 10px;
+  margin: 5px 10px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.content-select:hover select {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
 }
 
 .content-button button {
-  padding: 5px;
-  margin: 5px;
+  padding: 10px;
+  margin: 5px 10px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.content-button:hover button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
 }
 
 .card {
-  width: 25%;
+  width: 250px;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
-  margin: 5px;
-}
-
-.card:hover {
-  background-color: #181818;
+  margin: 5px 25px;
 }
 
 .content-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .card .content-card .img-card {
@@ -45,28 +66,32 @@
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform .7s ease;
+}
 
+.card .content-card:hover .img-card {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .card .content-card .img-card i {
-  display: none;
   position: absolute;
   bottom: 15%;
   right: 15%;
   font-size: 50px;
   color: green;
-  transition: all 3s ease;
+  opacity: 0;
+  transition: opacity .8s;
 }
 
 .card .content-card:hover .img-card i {
-  display: block;
-  transform: translateY(0);
+  opacity: 1;
+  cursor: pointer;
 }
 
 .card .content-card .text-card {
   width: 100%;
-  padding: 10px;
-  padding-bottom: 30px;
+  margin: 20px 10px;
   color: #181818;
 }
 
@@ -74,18 +99,35 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 20px;
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.card .content-card:hover .text-card h2 {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .card .content-card .text-card h3 {
   font-weight: 500;
   font-size: 16px;
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.card .content-card:hover .text-card h3 {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .card .content-card .text-card span {
   font-weight: 300;
   font-size: 13px;
+  opacity: 0;
+  transition: opacity 1.2s;
 }
 
-.card:hover .text-card {
-  color: white;
+.card .content-card:hover .text-card span {
+  opacity: 1;
+  cursor: pointer;
 }

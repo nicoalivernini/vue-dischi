@@ -1,10 +1,3 @@
-// Attravero una chiamata AJAX avere a disposizione una decina di dischi musicali.
-// https://flynn.boolean.careers/exercises/api/array/music
-// BONUS
-// Creare una select con tutti i generi dei dischi. In base a cosa scegliamo nella select, vedremo i corrispondenti cd.
-// BONUS 2
-// Ordinare i dischi per anno di uscita
-
 Vue.config.devtools = true;
 
 var app = new Vue ({
@@ -25,7 +18,6 @@ var app = new Vue ({
 
   }, //Chiusura Mounted
 
-
   methods: {
 
     ordinaAnno: function () {
@@ -42,7 +34,7 @@ var app = new Vue ({
           this.newGenere.push(this.albums[i].genre)
         }
       }
-    } //Chiusura filtro
+    } //Chiusura filtroGeneri
 
   } //Chiusura Methods
 
