@@ -15,8 +15,7 @@
     <div class="container">
       <div class="content-select">
         <select v-model="selezioneGenere" @click="filtroGeneri">
-          <option disabled value="">Seleziona un genere</option>
-          <option>Tutti i generi</option>
+          <option value="">Tutti i generi</option>
           <option v-for="genere in newGenere">{{ genere }}</option>
         </select>
       </div>
@@ -25,7 +24,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere || selezioneGenere === 'Tutti i generi'">
+      <div class="card" v-for="album in albums" v-if="album.genre == selezioneGenere || selezioneGenere === ''">
         <div class="content-card">
           <div class="img-card" :style="`background-image: url('${album.poster}')`">
             <i class="fas fa-play-circle"></i>
